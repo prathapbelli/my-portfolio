@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { PERSONAL_INFO } from '../constants';
 import ContactModal from './ContactModal';
 import ProfileModal from './ProfileModal';
-
-type Page = 'home' | 'experience' | 'skills' | 'projects';
+import { type Page } from '../types';
 
 interface HeaderProps {
   currentPage?: Page;
@@ -103,6 +102,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate }) => 
                 phone={PERSONAL_INFO.phone}
                 linkedin={PERSONAL_INFO.linkedin}
                 resumeUrl={PERSONAL_INFO.resumeUrl}
+                github={PERSONAL_INFO.github}
             />
         </header>
     );

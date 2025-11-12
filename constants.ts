@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { type Profile, type Skill, type Project, type Experience } from './types';
-import { PythonIcon, FastApiIcon, PostgreSqlIcon, PySparkIcon, GitActionsIcon, KeycloakIcon, KubernetesIcon, S3Icon, JavaIcon, HerokuIcon, NetlifyIcon, NodeJsIcon, PhpIcon, RubyOnRailsIcon, FfmpegIcon, PandasIcon, TemporalIcon, NovuIcon, VespaIcon, PosticoIcon, PgAnalyserIcon, AtlasIcon, DbmateIcon, CloudflareIcon } from './components/icons';
+import { PythonIcon, FastApiIcon, PostgreSqlIcon, PySparkIcon, GitActionsIcon, KeycloakIcon, KubernetesIcon, S3Icon, JavaIcon, FfmpegIcon, PandasIcon, TemporalIcon, NovuIcon, VespaIcon, PosticoIcon, PgAnalyserIcon, AtlasIcon, DbmateIcon, CloudflareIcon } from './components/icons';
 
 export const PROFILES: Profile[] = [
   { name: 'Recruiter', avatarColor: 'bg-blue-500' },
@@ -17,11 +17,12 @@ export const PERSONAL_INFO = {
   linkedin: 'https://www.linkedin.com/in/prathap-m-belli-8b0102132',
   resumeUrl: '/prathapa_belli_resume.pdf', 
   email: 'prathapmprathu@gmail.com',
-  phone: '+91 9739334635'
+  phone: '+91 9739334635',
+  github: 'https://github.com/prathapbell'
 };
 
 export const TOP_PICKS: Project[] = [
-    { title: 'Personal Info', imageUrl: 'https://picsum.photos/id/26/500/280', page: 'profile' },
+    { title: 'Personal Info', imageUrl: 'https://picsum.photos/id/26/500/280', page: 'personal' },
     { title: 'Work Experience', imageUrl: 'https://picsum.photos/id/5/500/280', page: 'experience' },
     { title: 'Skills', imageUrl: 'https://picsum.photos/id/20/500/280', page: 'skills' },
     { title: 'Projects', imageUrl: 'https://picsum.photos/seed/projects/500/280', page: 'projects' },
@@ -123,11 +124,12 @@ export const WORK_EXPERIENCE: Experience[] = [
   }
 ];
 
-export const PROJECTS_DUMMY: Project[] = [
-    { title: 'AI-Powered Voice Assistant', imageUrl: 'https://picsum.photos/seed/project1/500/280' },
-    { title: 'Healthcare Data Pipeline', imageUrl: 'https://picsum.photos/seed/project2/500/280' },
-    { title: 'Hotel Rate Optimizer API', imageUrl: 'https://picsum.photos/seed/project3/500/280' },
-    { title: 'Real-time Reporting Engine', imageUrl: 'https://picsum.photos/seed/project4/500/280' },
-    { title: 'Workforce Scheduler', imageUrl: 'https://picsum.photos/seed/project5/500/280' },
-    { title: 'API Integration Platform', imageUrl: 'https://picsum.photos/seed/project6/500/280' },
+export const MY_PROJECTS: Project[] = [
+    { title: 'Jeeves', imageUrl: 'https://picsum.photos/seed/project1/500/280', description: 'Developed an AI-powered just in time video training web application using Python and FastAPI.' },
+    { title: 'Penknife', imageUrl: 'https://picsum.photos/seed/project4/500/280', description: 'Customer relationship management and Application tracking system using  FastAPI endpoints for processing and managing candidate and company data. With gmail api integration and calendar api integration. Uses Postgres, and Git Actions for deployment.' },
+    { title: 'Healthcare Data Pipeline', imageUrl: 'https://picsum.photos/seed/project2/500/280', description: 'Transformed HL7 V2 healthcare data to FHIR and CCD formats using PySpark and data lakes.' },
+    { title: 'Hotel Rate Optimizer API', imageUrl: 'https://picsum.photos/seed/project3/500/280', description: 'Developed pricing logic, data transformations, and backend services using Python and Pandas.' },
+    { title: 'Roster solver', imageUrl: 'https://picsum.photos/seed/project5/500/280', description: 'Developed workforce scheduling system using java and quarkus.' },
+    { title: 'Hotelsoft Integration', imageUrl: 'https://picsum.photos/seed/project6/500/280', description: 'Integrated APIs for hotels data pipeline apcahe camel and activemq with power of java ,spring boot, xml and xslt transformation.' },
+    { title: 'Healthcare Interoperability', imageUrl: 'https://picsum.photos/seed/project8/500/280', description: 'Interoperability tool like cloverleaf interface engine for converting data from one format to another.' },
 ];

@@ -13,13 +13,14 @@ export interface Skill {
   imageUrl?: string;
 }
 
-export type Page = 'home' | 'experience' | 'skills' | 'projects' | 'profile';
+export type Page = 'home' | 'experience' | 'skills' | 'projects' | 'personal';
 
 export interface Project {
   title: string;
   imageUrl: string;
   link?: string;
   page?: Page;
+  description?: string;
 }
 
 export interface Experience {
