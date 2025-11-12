@@ -21,16 +21,16 @@ export const PERSONAL_INFO = {
 };
 
 export const TOP_PICKS: Project[] = [
-    { title: 'Personal Info', imageUrl: 'https://picsum.photos/id/26/500/280' },
-    { title: 'Work Experience', imageUrl: 'https://picsum.photos/id/5/500/280' },
-    { title: 'Skills', imageUrl: 'https://picsum.photos/id/20/500/280' },
-    { title: 'Projects', imageUrl: 'https://picsum.photos/seed/projects/500/280' },
+    { title: 'Personal Info', imageUrl: 'https://picsum.photos/id/26/500/280', page: 'profile' },
+    { title: 'Work Experience', imageUrl: 'https://picsum.photos/id/5/500/280', page: 'experience' },
+    { title: 'Skills', imageUrl: 'https://picsum.photos/id/20/500/280', page: 'skills' },
+    { title: 'Projects', imageUrl: 'https://picsum.photos/seed/projects/500/280', page: 'projects' },
 ];
 
 export const CONTINUE_WATCHING: Project[] = [
-    { title: 'Music', imageUrl: 'https://picsum.photos/seed/music/500/280' },
-    { title: 'Reading', imageUrl: 'https://picsum.photos/seed/reading/500/280' },
-    { title: 'Blogs', imageUrl: 'https://picsum.photos/seed/blogs/500/280' },
+    { title: 'Music', imageUrl: 'https://picsum.photos/seed/music/500/280', link: 'https://medium.com/@prathapa.belli' },
+    { title: 'Reading', imageUrl: 'https://picsum.photos/seed/reading/500/280', link: 'https://medium.com/@prathapa.belli' },
+    { title: 'Blogs', imageUrl: 'https://picsum.photos/seed/blogs/500/280', link: 'https://medium.com/@prathapa.belli' },
 ];
 
 export const SKILLS_BACKEND: Skill[] = [

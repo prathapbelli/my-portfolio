@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { PERSONAL_INFO } from '../constants';
 import ContactModal from './ContactModal';
+import ProfileModal from './ProfileModal';
 
 type Page = 'home' | 'experience' | 'skills' | 'projects';
 
@@ -13,6 +14,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -75,6 +77,15 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate }) => 
                     >
                         Hire Me
                     </button>
+                    <button
+                        onClick={() => setIsProfileModalOpen(true)}
+                        className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center hover:from-blue-500 hover:to-blue-700 transition-all cursor-pointer"
+                        aria-label="Profile"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
             <ContactModal 
@@ -82,6 +93,16 @@ const Header: React.FC<HeaderProps> = ({ currentPage = 'home', onNavigate }) => 
                 onClose={() => setIsModalOpen(false)}
                 email={PERSONAL_INFO.email}
                 phone={PERSONAL_INFO.phone}
+            />
+            <ProfileModal
+                isOpen={isProfileModalOpen}
+                onClose={() => setIsProfileModalOpen(false)}
+                name={PERSONAL_INFO.name}
+                title={PERSONAL_INFO.title}
+                email={PERSONAL_INFO.email}
+                phone={PERSONAL_INFO.phone}
+                linkedin={PERSONAL_INFO.linkedin}
+                resumeUrl={PERSONAL_INFO.resumeUrl}
             />
         </header>
     );
